@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8c651e3-4fb0-4ad8-80cd-b014b56843ab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/eg1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eg2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="api-simulator" type="Python.FastAPI">
       <option name="file" value="$PROJECT_DIR$/main.py" />
@@ -80,6 +88,10 @@
       <updated>1738737419111</updated>
       <workItem from="1738737427138" duration="1941000" />
       <workItem from="1738919053960" duration="600000" />
+      <workItem from="1739036793313" duration="757000" />
+      <workItem from="1739568072861" duration="2870000" />
+      <workItem from="1739690337757" duration="160000" />
+      <workItem from="1739694687560" duration="3645000" />
     </task>
     <servers />
   </component>
@@ -87,6 +99,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/api_simulator$api_simulator.coverage" NAME="api-simulator Coverage Results" MODIFIED="1738737648670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/api_simulator$api_simulator.coverage" NAME="api-simulator Coverage Results" MODIFIED="1739698277209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

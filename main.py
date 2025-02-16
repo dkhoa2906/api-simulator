@@ -1,35 +1,47 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import Response
-import uvicorn
+from fastapi.responses import FileResponse
+from pathlib import Path
 
 app = FastAPI()
 
 # Add CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins, change this to specific domains for security
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],  # Allows all methods (GET, POST, PUT, DELETE, etc.)
-    allow_headers=["*"],  # Allows all headers
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-@app.post("/process/")
-async def upload_images(
-        face: UploadFile = File(...),
-        shape: UploadFile = File(...),
-        color: UploadFile = File(...),
+# Temporary storage
+input_dir = Path("./upload")
+input_dir.mkdir(exist_ok=True)
+
+# Pre-saved image for simulation
+eg_1 = "eg1.png"
+eg_2 = "eg2.png"
+
+@app.post("/swap_hair")
+async def swap_hair(
+    face_image: UploadFile = File(...),
+    hair_shape: UploadFile = File(...),
+    hair_color: UploadFile = File(...),
 ):
-    try:
-        img_bytes = await color.read()
+    return FileResponse(eg_1, media_type="image/png")
 
-        return Response(content=img_bytes, media_type=color.content_type)
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+@app.post("/swap_hair_visual")
+async def swap_hair_visual(
+    face_image: UploadFile = File(...),
+    hair_shape: UploadFile = File(...),
+    hair_color: UploadFile = File(...),
+):
+    return FileResponse(eg_2, media_type="image/png")
 
 if __name__ == "__main__":
+    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
     # Command to run with Gunicorn:
     # gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:8000
